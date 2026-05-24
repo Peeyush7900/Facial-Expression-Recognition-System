@@ -1,0 +1,18 @@
+# Virtual Environments & Caches
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Node Modules & Builds
+node_modules/
+dist/
+.env
+
+# Local Test Scripts
+backend/test_*.py
+backend/inspect_*.py
+
+# System Files
+.DS_Store
+Thumbs.db

@@ -10,9 +10,10 @@ import SystemArchitecture from './SystemArchitecture';
 import { Camera, Upload, BarChart2, Cpu, Activity, ShieldCheck, ShieldAlert, Target, Network, Database, BookOpen, Download } from 'lucide-react';
 import { jsPDF } from 'jspdf';
 
-const BACKEND_URL = typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
-  ? 'http://localhost:8000'
-  : (typeof window !== 'undefined' ? `http://${window.location.hostname}:8000` : 'http://localhost:8000');
+const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || 
+  (typeof window !== 'undefined' && (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+    ? 'http://localhost:8000'
+    : (typeof window !== 'undefined' ? `http://${window.location.hostname}:8000` : 'http://localhost:8000'));
 const EMOJIS = {
   angry: '😡',
   disgust: '🤢',
